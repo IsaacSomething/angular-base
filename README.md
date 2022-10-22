@@ -19,19 +19,12 @@ https://pr.new/github.com/IsaacSomething/angular-base
 - "@angular/core": "^14.2.7"
 - "@angular/material": "^14.2.5"
 
-#### Prettier config
+#### Branch with-server
+
+Start a simple server on localhost:9000, checkout to branch `with-server`
 
 ```
-module.exports = {
- arrowParens: "avoid",
- bracketSpacing: true,
- printWidth: 140,
- semi: true,
- singleQuote: true,
- tabWidth: 2,
- trailingComma: "none",
- useTabs: false,
-};
+npm run server
 ```
 
 <br />
