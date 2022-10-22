@@ -3,7 +3,7 @@
   "version": "14.2.7",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve -o",
+    "start": "ng serve -o --proxy-config proxy.conf.json",
     "hmr": "ng serve --hmr -o",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
