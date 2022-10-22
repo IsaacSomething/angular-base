@@ -19,7 +19,10 @@ https://pr.new/github.com/IsaacSomething/angular-base
 - "@angular/core": "^14.2.7"
 - "@angular/material": "^14.2.5"
 
-#### Branch with-server
+<br />
+<hr />
+
+### Branch "with-server"
 
 Start a simple server on localhost:9000, checkout to branch `with-server`
 
