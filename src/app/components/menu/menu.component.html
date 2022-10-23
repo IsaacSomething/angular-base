@@ -3,20 +3,8 @@
 </mat-toolbar>
 
 <mat-nav-list>
-  <mat-list-item routerLink="/">
-    <mat-icon matListIcon>folder</mat-icon>
-    <h3 matLine>Home</h3>
-  </mat-list-item>
-  <mat-list-item routerLink="/podcasts">
-    <mat-icon matListIcon>folder</mat-icon>
-    <h3 matLine>Podcasts</h3>
-  </mat-list-item>
-  <mat-list-item routerLink="/episodes">
-    <mat-icon matListIcon>folder</mat-icon>
-    <h3 matLine>Episodes</h3>
-  </mat-list-item>
-  <mat-list-item routerLink="/users">
-    <mat-icon matListIcon>folder</mat-icon>
-    <h3 matLine>Users</h3>
+  <mat-list-item *ngFor="let route of routes" [routerLink]="route.path">
+    <mat-icon *ngIf="route?.data as data" matListIcon>{{ data['icon'] }}</mat-icon>
+    <h3 matLine>{{ route.title }}</h3>
   </mat-list-item>
 </mat-nav-list>

@@ -1,28 +1,36 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+export const routeProps: Routes = [
   {
     path: 'home',
-    title: 'Base: Home',
-    loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
+    title: 'Home',
+    loadChildren: () => import('./home/home.module').then(m => m.HomeModule),
+    data: { icon: 'home' }
   },
   {
     path: 'podcasts',
-    title: 'Base: Podcasts',
-    loadChildren: () => import('./podcasts/podcasts.module').then(m => m.PodcastsModule)
+    title: 'Podcasts',
+    loadChildren: () => import('./podcasts/podcasts.module').then(m => m.PodcastsModule),
+    data: { icon: 'podcasts' }
   },
   {
     path: 'episodes',
-    title: 'Base: Episodes',
-    loadChildren: () => import('./episodes/episodes.module').then(m => m.EpisodesModule)
+    title: 'Episodes',
+    loadChildren: () => import('./episodes/episodes.module').then(m => m.EpisodesModule),
+    data: { icon: 'volume_up' }
   },
   {
     path: 'users',
-    title: 'Base: Users',
-    loadChildren: () => import('./users/users.module').then(m => m.UsersModule)
-  },
+    title: 'Users',
+    loadChildren: () => import('./users/users.module').then(m => m.UsersModule),
+    data: { icon: 'people' }
+  }
+];
+
+const routes: Routes = [
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  ...routeProps,
   {
     path: '**',
     loadChildren: () => import('./not-found/not-found.module').then(m => m.NotFoundModule)
