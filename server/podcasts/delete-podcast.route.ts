@@ -1,12 +1,11 @@
 import { Request, Response } from 'express';
-import { COURSES } from './db-data.route';
+import { PODCASTS } from './data';
 
 export function deleteCourse(req: Request, res: Response) {
-  console.log('Deleting course ...');
+  console.info('Deleting podcast ...');
 
   const id = req.params['id'];
-  const course = COURSES[id];
-  delete COURSES[id];
+  delete PODCASTS[id];
 
   setTimeout(() => res.status(200).json({ id }), 2000);
 }

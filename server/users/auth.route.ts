@@ -1,8 +1,13 @@
 import { Request, Response } from 'express';
-import { authenticate } from './db-data.route';
+import { USERS } from './data';
+
+export function authenticate(email: string, password: string) {
+  const user: any = Object.values(USERS).find(user => user.email === email);
+  return user && user.password == password ? user : undefined;
+}
 
 export function loginUser(req: Request, res: Response) {
-  console.log('User login attempt ...');
+  console.info('User login attempt ...');
 
   const { email, password } = req.body;
   const user = authenticate(email, password);

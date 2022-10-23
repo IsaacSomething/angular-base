@@ -1,11 +1,12 @@
 import * as express from 'express';
 import { Application } from 'express';
-import { getAllCourses, getCourseByUrl } from './get-courses.route';
-import { searchLessons } from './search-lessons.route';
-import { loginUser } from './auth.route';
-import { saveCourse } from './save-course.route';
-import { createCourse } from './create-course.route';
-import { deleteCourse } from './delete-course.route';
+import { loginUser } from './users/auth.route';
+import { deleteCourse } from './podcasts/delete-podcast.route';
+import { getAllPodcasts, getPodcastByUrl } from './podcasts/get-podcasts.route';
+import { createPodcast } from './podcasts/create-podcast.route';
+import { savePodcast } from './podcasts/save-podcast.route';
+import { getAllEpisodes } from './episodes/get-episodes.route';
+import { getAllUsers } from './users/get-users.route';
 
 const bodyParser = require('body-parser');
 const app: Application = express();
@@ -15,13 +16,19 @@ app.use(cors({ origin: true }));
 app.use(bodyParser.json());
 
 app.route('/api/login').post(loginUser);
-app.route('/api/courses').get(getAllCourses);
-app.route('/api/course').post(createCourse);
-app.route('/api/course/:id').put(saveCourse);
-app.route('/api/course/:id').delete(deleteCourse);
-app.route('/api/courses/:courseUrl').get(getCourseByUrl);
-app.route('/api/lessons').get(searchLessons);
+app.route('/api/users').post(getAllUsers);
+app.route('/api/podcasts').get(getAllPodcasts);
+app.route('/api/episodes').get(getAllEpisodes);
+app.route('/api/podcast').post(createPodcast);
+app.route('/api/podcast/:id').put(savePodcast);
+app.route('/api/podcast/:id').delete(deleteCourse);
+app.route('/api/podcast/:podcastUrl').get(getPodcastByUrl);
+/* app.route('/api/lessons').get(searchLessons); */
 
 const httpServer: any = app.listen(9000, () =>
-  console.log('Playground NgRx: HTTP REST API Server running at http://localhost:' + httpServer.address().port)
+  console.info('Simple HTTP REST API Server running at http://localhost:' + httpServer.address().port)
 );
+
+/**
+ * Dummy data got from https://taddy.org/developers
+ */

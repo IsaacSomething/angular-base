@@ -6,7 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { LayoutModule } from '@angular/cdk/layout';
 import { ToolbarModule } from './components/toolbar';
 import { MenuModule } from './components/menu';
-const moduleImports = [BrowserModule, BrowserAnimationsModule, AppRoutingModule, LayoutModule, ToolbarModule, MenuModule];
+import { HttpClientModule } from '@angular/common/http';
+const moduleImports = [BrowserModule, BrowserAnimationsModule, AppRoutingModule, LayoutModule, ToolbarModule, MenuModule, HttpClientModule];
 
 import { MatSidenavModule } from '@angular/material/sidenav';
 const materialImports = [MatSidenavModule];
