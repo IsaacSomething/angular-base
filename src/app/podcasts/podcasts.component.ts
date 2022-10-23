@@ -1,16 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { ApiService } from '../services';
+import { Podcast } from './model';
 import { Observable } from 'rxjs';
-import { ApiService } from '../services/api.service';
 
 @Component({
   selector: 'base-podcasts',
   templateUrl: './podcasts.component.html',
   styleUrls: ['./podcasts.component.scss']
 })
-export class PodcastsComponent implements OnInit {
-  podcasts$: Observable<any | undefined> = this.apiService.findAllPodcasts();
+export class PodcastsComponent {
+  podcasts$: Observable<any | undefined> = this.apiService.getAll<Podcast[]>('podcasts');
 
   constructor(private apiService: ApiService) {}
-
-  ngOnInit() {}
 }

@@ -10,4 +10,4 @@ import { EpisodesComponent } from './episodes.component';
   declarations: [EpisodesComponent],
   imports: [CommonModule, ...moduleImports]
 })
-export class PodcastsModule {}
+export class EpisodesModule {}

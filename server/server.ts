@@ -16,7 +16,7 @@ app.use(cors({ origin: true }));
 app.use(bodyParser.json());
 
 app.route('/api/login').post(loginUser);
-app.route('/api/users').post(getAllUsers);
+app.route('/api/users').get(getAllUsers);
 app.route('/api/podcasts').get(getAllPodcasts);
 app.route('/api/episodes').get(getAllEpisodes);
 app.route('/api/podcast').post(createPodcast);

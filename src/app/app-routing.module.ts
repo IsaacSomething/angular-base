@@ -16,7 +16,12 @@ const routes: Routes = [
   {
     path: 'episodes',
     title: 'Base: Episodes',
-    loadChildren: () => import('./episodes/episodes.module').then(m => m.PodcastsModule)
+    loadChildren: () => import('./episodes/episodes.module').then(m => m.EpisodesModule)
+  },
+  {
+    path: 'users',
+    title: 'Base: Users',
+    loadChildren: () => import('./users/users.module').then(m => m.UsersModule)
   },
   {
     path: '**',
