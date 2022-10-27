@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { routeProps } from 'src/app/app-routing.module';
+import { routeProps } from '@base/app-routing.module';
 
 @Component({
   selector: 'base-menu',

@@ -33,3 +33,16 @@ npm run server
 <br />
 
 ![alt text](./src/assets/demo.png)
+
+
+### @base tsconfig Path
+
+Imports can be added with `@base` as set in the `tsconfig.json` path property
+
+```
+import { ToolbarModule } from '@base/components/toolbar
+
+or
+
+import * as toolbar from '@base/component/toolbar
+```
