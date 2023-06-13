@@ -17,7 +17,7 @@ Or join [codeflow](https://stackblitz.com/codeflow/beta) | [short overview](http
 https://pr.new/github.com/IsaacSomething/angular-base
 ```
 
-- "@angular/core": "^16.0.4"
+- "@angular/core": "^16.1.0"
 - "@angular/material": "^16.0.3"
 
 <br />
