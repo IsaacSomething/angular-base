@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'base-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  standalone: true,
+  template: ` <p>Home works!</p> `
 })
 export class HomeComponent {
   constructor() {}

@@ -1,7 +1,3 @@
-@use '@angular/material' as mat;
-@import '@angular/material/theming';
-@include mat.core();
-
 :root {
   --base-divider: #f3f3f3;
   --base-spacing: 16px;

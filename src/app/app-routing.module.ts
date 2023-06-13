@@ -5,7 +5,7 @@ export const routeProps: Routes = [
   {
     path: 'home',
     title: 'Home',
-    loadChildren: () => import('./home/home.module').then(m => m.HomeModule),
+    loadComponent: () => import('./home/home.component').then(c => c.HomeComponent),
     data: { icon: 'home' }
   }
 ];
@@ -15,7 +15,7 @@ const routes: Routes = [
   ...routeProps,
   {
     path: '**',
-    loadChildren: () => import('./not-found/not-found.module').then(m => m.NotFoundModule)
+    loadComponent: () => import('./not-found/not-found.component').then(c => c.NotFoundComponent)
   }
 ];
 
