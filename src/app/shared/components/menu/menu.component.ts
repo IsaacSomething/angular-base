@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -9,6 +9,7 @@ import { routeProps } from '@base/app-routing.module';
 @Component({
   selector: 'base-menu',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [CommonModule, RouterModule, MatIconModule, MatToolbarModule, MatListModule],
   template: `
     <mat-toolbar class="!bg-transparent">
@@ -30,6 +31,4 @@ import { routeProps } from '@base/app-routing.module';
 })
 export class MenuComponent {
   routes = routeProps;
-
-  constructor() {}
 }
