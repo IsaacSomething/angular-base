@@ -3,9 +3,9 @@ import { AsyncPipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { RouterOutlet } from '@angular/router';
-import { Subject, map } from 'rxjs';
-import { MenuComponent } from './shared/components/menu/menu.component';
-import { ToolbarComponent } from './shared/components/toolbar/toolbar.component';
+import { MenuComponent } from '@base/components/menu';
+import { ToolbarComponent } from '@base/components/toolbar';
+import { map } from 'rxjs';
 
 @Component({
   selector: 'base-root',
@@ -31,5 +31,4 @@ import { ToolbarComponent } from './shared/components/toolbar/toolbar.component'
 export class AppComponent {
   private breakpointObserver = inject(BreakpointObserver);
   small$ = this.breakpointObserver.observe([Breakpoints.XSmall]).pipe(map(({ matches }) => matches));
-  destroyed$ = new Subject<void>();
 }
