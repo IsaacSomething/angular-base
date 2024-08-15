@@ -23,7 +23,7 @@ import { BaseLogoModule } from '@base/components/logo';
       <span class="flex-auto"></span>
       <button mat-icon-button [matMenuTriggerFor]="menu"><mat-icon>show_chart</mat-icon></button>
       <button mat-icon-button [matMenuTriggerFor]="menu"><mat-icon>line_weight</mat-icon></button>
-      <button class="!shadow-none font-black" mat-mini-fab color="secondary">AB</button>
+      <button class="!shadow-none text-sm" mat-mini-fab color="secondary">AB</button>
     </mat-toolbar>
 
     <mat-menu #menu="matMenu">

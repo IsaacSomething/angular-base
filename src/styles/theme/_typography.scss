@@ -3,9 +3,9 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;600&display=swap');
 
-$base-app-typography-base: mat.define-typography-config(
+$base-app-typography-base: mat.m2-define-typography-config(
   $font-family: var(--base-font-family),
-  $button: mat.define-typography-level(14px, 14px, 600)
+  $button: mat.m2-define-typography-level(14px, 14px, 600)
 );
 
 @include mat.all-component-typographies($base-app-typography-base);
