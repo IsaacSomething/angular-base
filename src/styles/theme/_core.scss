@@ -12,9 +12,9 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$base-primary: mat.m2-define-palette(palette.$base-primary);
-$base-accent: mat.m2-define-palette(palette.$base-accent);
-$base-warn: mat.m2-define-palette(palette.$base-warn);
+$base-primary-theme: mat.m2-define-palette(palette.$base-primary);
+$base-accent-theme: mat.m2-define-palette(palette.$base-accent);
+$base-warn-theme: mat.m2-define-palette(palette.$base-warn);
 
 $base-typography: mat.m2-define-typography-config(
   $font-family: var(--acth-font-family)
@@ -25,9 +25,9 @@ $base-typography: mat.m2-define-typography-config(
 $base-theme: mat.m2-define-light-theme(
   (
     color: (
-      primary: $base-primary,
-      accent: $base-accent,
-      warn: $base-warn
+      primary: $base-primary-theme,
+      accent: $base-accent-theme,
+      warn: $base-warn-theme
     )
   )
 );

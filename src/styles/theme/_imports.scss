@@ -1,4 +1,4 @@
-@import './core';
-@import './palette';
-@import './typography';
-@import './tailwind';
+@forward './palette';
+@forward './typography';
+@forward './tailwind';
+@forward './core';
