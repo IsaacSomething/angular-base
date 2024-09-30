@@ -25,13 +25,6 @@ import { BaseLogoModule } from '../logo';
         <div matListItemTitle>{{ route.title }}</div>
       </mat-list-item>
       }
-      <!--  -->
-      @for(item of [1, 1, 1, 1, 1, 1];track idx; let idx = $index){
-      <mat-list-item routerLink="/">
-        <mat-icon matListItemIcon>folder</mat-icon>
-        <div matListItemTitle>{{ idx }}: Item</div>
-      </mat-list-item>
-      }
     </mat-nav-list>
   `
 })
