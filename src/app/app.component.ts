@@ -21,7 +21,7 @@ import { map } from 'rxjs';
       <mat-sidenav-content [class.small]="small$ | async">
         <base-toolbar [sidenav]="sidenav" [small]="small$ | async"></base-toolbar>
 
-        <div class="m-6">
+        <div class="mx-6 mt-4">
           <router-outlet></router-outlet>
         </div>
       </mat-sidenav-content>

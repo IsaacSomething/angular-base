@@ -18,7 +18,7 @@ import { BaseLogoModule } from '../logo';
 
     <mat-nav-list>
       @for(route of routes;track idx;let idx = $index){
-      <mat-list-item [routerLink]="route.path">
+      <mat-list-item [routerLink]="route.path" class="pointer">
         @if(route?.data; as data){
         <mat-icon matListItemIcon>{{ data['icon'] }}</mat-icon>
         }
