@@ -7,11 +7,10 @@ import { routeProps } from '../../../app-routing.module';
 import { BaseLogoModule } from '../logo';
 
 @Component({
-  selector: 'base-menu',
-  standalone: true,
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [RouterModule, MatIconModule, MatToolbarModule, MatListModule, BaseLogoModule],
-  template: `
+    selector: 'base-menu',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [RouterModule, MatIconModule, MatToolbarModule, MatListModule, BaseLogoModule],
+    template: `
     <mat-toolbar class="!bg-transparent">
       <base-logo />
     </mat-toolbar>

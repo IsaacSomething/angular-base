@@ -7,11 +7,10 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { BaseLogoModule } from '@base/components/logo';
 
 @Component({
-  selector: 'base-toolbar',
-  standalone: true,
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [MatIconModule, MatToolbarModule, MatButtonModule, MatMenuModule, BaseLogoModule],
-  template: `
+    selector: 'base-toolbar',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [MatIconModule, MatToolbarModule, MatButtonModule, MatMenuModule, BaseLogoModule],
+    template: `
     <mat-toolbar>
       @if(small){
       <button mat-icon-button (click)="sidenav.toggle()">

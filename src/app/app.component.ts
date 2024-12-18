@@ -8,11 +8,10 @@ import { ToolbarComponent } from '@base/components/toolbar';
 import { map } from 'rxjs';
 
 @Component({
-  selector: 'base-root',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
-  imports: [MatSidenavModule, MenuComponent, ToolbarComponent, RouterOutlet, AsyncPipe],
-  template: `
+    selector: 'base-root',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [MatSidenavModule, MenuComponent, ToolbarComponent, RouterOutlet, AsyncPipe],
+    template: `
     <mat-sidenav-container>
       <mat-sidenav #sidenav mode="side" [opened]="!(small$ | async)">
         <base-menu></base-menu>
